@@ -16,6 +16,6 @@ dependencies:
   - jupyterlab=4.0.10
   - pip:
       - soundfile==0.12.1
-      - torch==2.2.1+cpu
+      - torch==2.2.1
       - pedalboard==0.7.1
       - noisereduce==1.0.0
