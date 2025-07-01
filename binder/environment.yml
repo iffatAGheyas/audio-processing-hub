@@ -1,31 +1,32 @@
-name: audio-tutorial
+name: audio-hub
 channels:
   - conda-forge
 
 dependencies:
-  # Base Python + FFmpeg (for pydub)
+  # Core Python
   - python=3.12.4
-  - ffmpeg
-  - pip=25.1.1
 
-  # Python packages installed via pip, pinned for reproducibility
+  # Numeric/Scientific Stack
+  - numpy=2.0.0
+  - scipy=1.13.0
+  - pandas=2.2.0
+
+  # Audio Processing
+  - librosa=0.10.1
+  - pydub=0.25.1
+  - soundfile=0.12.1
+  - ffmpeg=6.1.1
+
+  # Visualization/UI
+  - matplotlib=3.8.3
+  - ipywidgets=8.1.2
+  - jupyterlab=4.0.10
+
+  # System Libraries
+  - libsndfile=1.2.2
+
+  # Pip-only Packages
   - pip:
-    - jupyterlab==4.2.4       # latest JupyterLab 4.x series
-    - ipywidgets==8.1.7       # interactive widgets
-    - numpy==2.1.3
-    - scipy==1.15.2
-    - matplotlib==3.10.1
-    - pandas==2.2.2
-    - librosa==0.11.0
-    - pydub==0.25.1
-
-    # Additional dependencies for all modules
-    - soundfile==0.13.1
-    - PyWavelets==1.8.0
-    - scikit-learn==1.6.1
-    - scikit-image==0.25.2
-    - plotly==6.0.1
-    - umap-learn==0.5.7
-    - torch==2.7.1+cpu
-    - transformers==4.52.4
-    - tensorflow==2.19.0
+      - torch==2.2.1+cpu    # CPU-only wheel available for Python 3.12
+      - pedalboard==0.7.1   # Audio effects
+      - noisereduce==1.0.0  # Noise reduction
