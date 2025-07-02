@@ -1,0 +1,17 @@
+name: audio-hub
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - scipy
+  - pandas
+  - librosa
+  - pydub
+  - matplotlib
+  - jupyterlab
+  - ipywidgets
+  - pip
+  - pip:
+      - soundfile
+      - noisereduce
