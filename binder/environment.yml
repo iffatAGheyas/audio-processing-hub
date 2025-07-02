@@ -1,7 +1,7 @@
 name: audio-hub
 channels:
   - conda-forge
-
+  - pytorch
 dependencies:
   - python=3.11
   - numpy=1.26.4
@@ -9,13 +9,15 @@ dependencies:
   - pandas=2.0.3
   - librosa=0.10.1
   - pydub=0.25.1
-  - ffmpeg=6.1.1
+  - ffmpeg=6.1.1            # you can also let apt handle this if you’d rather
   - libsndfile=1.2.2
   - matplotlib=3.8.3
   - ipywidgets=8.1.2
   - jupyterlab=4.0.10
+  - pytorch=2.2.1           # pulls from the pytorch channel
+  - cpuonly                 # if you don’t need CUDA
+  - pip                     # leave pip in so you can still install the other PyPI-only packages
   - pip:
       - soundfile==0.12.1
-      - torch==2.2.1
       - pedalboard==0.7.1
       - noisereduce==1.0.0
